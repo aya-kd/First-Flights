@@ -94,8 +94,8 @@ Fix the input calculation in the function `TSwapPool::getInputAmountBasedOnOutpu
         revertIfZero(outputReserves)
         returns (uint256 inputAmount)
     {
-+       uint256 numerator = (inputReserves * outputAmount) * 997;
-+       uint256 denumerator = (outputReserves - outputAmount) * 1000;
++       uint256 numerator = (inputReserves * outputAmount) * 1000;
++       uint256 denumerator = (outputReserves - outputAmount) * 997;
         return
 -           ((inputReserves * outputAmount) * 10000) /
 -           ((outputReserves - outputAmount) * 997);
